@@ -5,27 +5,26 @@
     <title></title>
 </head>
 <body>
-    <h3>Tampil User</h3>
+    <h3>Tampil Paket</h3>
     <table class="table table-hover table-striped">
         <thead>
             <tr>
-                <th>NO</th><th>NAMA</th>
-    <th>USERNAME</th><th>ROLE</th><th>AKSI</th>
+                <th>NO</th><th>NAMA PAKET</th>
+    <th>HARGA</th><th>AKSI</th>
             </tr>
         </thead>
         <tbody>
         <?php 
             include "koneksi.php";
-$qry_user=mysqli_query($conn,"select * from user");
+$qry_paket=mysqli_query($conn,"select * from paket");
             $no=0;
-            while($data_user=mysqli_fetch_array($qry_user)){
+            while($data_paket=mysqli_fetch_array($qry_paket)){
             $no++;?>
             <tr>
                 <td><?=$no?></td>
-                <td><?=$data_user['nama']?></td>
-                <td><?=$data_user['username']?></td>
-                <td><?=$data_user['role']?></td>
-                <td><a href="ubah_user.php?id_user=<?=$data_user['id_user']?>" class="btn btn-success">Ubah</a> | <a href="hapus.php?id_siswa=<?=$data_user['id_user']?>" 
+                <td><?=$data_paket['nama_paket']?></td>
+                <td><?=$data_paket['harga']?></td>
+                <td><a href="ubah_paket.php?id_paket=<?=$data_paket['id_paket']?>" class="btn btn-success">Ubah</a> | <a href="hapus.php?id_siswa=<?=$data_paket['id_paket']?>" 
                 onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
             </tr>
             <?php 

@@ -5,20 +5,22 @@
     <title></title>
 </head>
 <body>
-    <h3>Tambah User</h3>
-    <form action="proses_tambah_user.php" method="post">
-        nama  :
+    <h3>Registrasi Member</h3>
+    <form action="proses_tambah_member.php" method="post">
+        Nama :
         <input type="text" name="nama" value="" class="form-control">
-        Username : 
-        <input type="text" name="username" value="" class="form-control">
-        Password : 
-        <input type="password" name="password" value="" class="form-control">
-        Role :
-        <select name="role" class="form-control">
+        Alamat : 
+        <textarea name="alamat" class="form-control" rows="4"></textarea>
+        Gender : 
+        <select name="jk" class="form-control">
             <option></option>
-            <option value="admin">admin</option>
-            <option value="kasir">kasir</option>
-        <input type="submit" name="simpan" value="Tambah paket" class="btn btn-primary">
+            <option value="L">Laki-laki</option>
+            <option value="P">Perempuan</option>
+        </select>
+        Telepon :
+        <input type="varchar" name="telp" value="" class="form-control">
+        <br>
+        <input type="submit" name="simpan" value="Tambah Member" class="btn btn-primary">
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

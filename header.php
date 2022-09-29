@@ -25,16 +25,16 @@ session_start();
       <li class="active"><a href="home.php">Home</a></li>
         </ul>
         <ul class="nav navbar-nav">
-      <li class="active"><a href="transaksi.php">Transaksi</a></li>
+      <li class="active"><a href="cucian.php">Transaksi</a></li>
         </ul>
         <ul class="nav navbar-nav">
-      <li class="active"><a href="paket.php">Paket Laundry</a></li>
+      <li class="active"><a href="tampil_paket.php">Paket Laundry</a></li>
         </ul>
 <      <ul class="nav navbar-nav">
       <li class="active"><a href="tampil_user.php">Data User</a></li>
         </ul>
         <ul class="nav navbar-nav">
-      <li class="active"><a href="member.phpp">Data Member</a></li>
+      <li class="active"><a href="tampil_member.php">Registrasi Member</a></li>
         </ul>
     <ul class="nav navbar-nav navbar-right">
        <li class="nav-item">

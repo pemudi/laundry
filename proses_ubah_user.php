@@ -24,7 +24,7 @@ if($_POST){
             if($update){
                 echo "<script>alert('Sukses update user');location.href='tampil_user.php';</script>";
             } else {
-                echo "<script>alert('Gagal update user');location.href='ubah_user.php?id_siswa=".$id_user."';</script>";
+                echo "<script>alert('Gagal update user');location.href='ubah_user.php?id_paket=".$id_user."';</script>";
             }
         }
         

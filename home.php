@@ -1,7 +1,7 @@
 <?php 
     include "header.php";
 ?>
-<h2>Selamat datang <?=$_SESSION['nama']?> di website Laundry Cling!.</h2>
+<center><h2>Selamat datang <?=$_SESSION['nama']?> di website Laundry Cling!.</h2></center>
 <?php
     include "footer.php";
 ?>
