@@ -1,3 +1,6 @@
+<?php 
+    include "header.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,15 +8,15 @@
     <title></title>
 </head>
 <body>
-    <h3>Tambah User</h3>
+    <h2><b>Tambah User</b></h2>
     <form action="proses_tambah_user.php" method="post">
-        nama  :
+        Nama:
         <input type="text" name="nama" value="" class="form-control">
-        Username : 
+        Username 
         <input type="text" name="username" value="" class="form-control">
-        Password : 
+        Password:
         <input type="password" name="password" value="" class="form-control">
-        Role :
+        Role:
         <select name="role" class="form-control">
             <option></option>
             <option value="admin">admin</option>

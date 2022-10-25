@@ -1,3 +1,9 @@
+<?php 
+    include "header.php";
+?>
+<?php
+    if($_SESSION['role'] == 'admin'){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,12 +11,11 @@
     <title></title>
 </head>
 <body>
-    <h3>Tampil User</h3>
+    <h1><b>Tampil User</b></h1>
     <table class="table table-hover table-striped">
         <thead>
             <tr>
-                <th>NO</th><th>NAMA</th>
-    <th>USERNAME</th><th>ROLE</th><th>AKSI</th>
+                <th><h3>NO</h3></th><th><h3>NAMA</h3></th><th><h3>USERNAME</h3></th><th><h3>ROLE</h3></th><th><h3>AKSI</h3></th>
             </tr>
         </thead>
         <tbody>
@@ -21,18 +26,23 @@ $qry_user=mysqli_query($conn,"select * from user");
             while($data_user=mysqli_fetch_array($qry_user)){
             $no++;?>
             <tr>
-                <td><?=$no?></td>
-                <td><?=$data_user['nama']?></td>
-                <td><?=$data_user['username']?></td>
-                <td><?=$data_user['role']?></td>
-                <td><a href="ubah_user.php?id_user=<?=$data_user['id_user']?>" class="btn btn-success">Ubah</a> | <a href="hapus.php?id_siswa=<?=$data_user['id_user']?>" 
-                onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
+                <td><h4><?=$no?></h4></td>
+                <td><h4><?=$data_user['nama']?></h4></td>
+                <td><h4><?=$data_user['username']?></h4></td>
+                <td><h4><?=$data_user['role']?><h4></td>
+                <td><a href="ubah_user.php?id_user=<?=$data_user['id_user']?>" class="btn btn-success"><h4>Ubah</h4></a> | <a href="hapus_user.php?id_user=<?=$data_user['id_user']?>" 
+                onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger"><h4>Hapus</h4></a></td>
             </tr>
             <?php 
             }
+        }
             ?>
         </body>
     </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+    </table>
+    <a href="tambah_user.php" class="btn btn-primary">Tambah User</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

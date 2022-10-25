@@ -1,3 +1,9 @@
+<?php 
+    include "header.php";
+?>
+<?php
+    if($_SESSION['role'] == 'admin'){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,12 +11,11 @@
     <title></title>
 </head>
 <body>
-    <h3>Tampil Paket</h3>
+    <h1>Tampil Paket</h1>
     <table class="table table-hover table-striped">
         <thead>
             <tr>
-                <th>NO</th><th>NAMA PAKET</th>
-    <th>HARGA</th><th>AKSI</th>
+                <th><h3>NO</h3></th><th><h3>NAMA PAKET</h3></th><th><h3>HARGA</h3></th><th><h3>AKSI</h3></th>
             </tr>
         </thead>
         <tbody>
@@ -21,17 +26,23 @@ $qry_paket=mysqli_query($conn,"select * from paket");
             while($data_paket=mysqli_fetch_array($qry_paket)){
             $no++;?>
             <tr>
-                <td><?=$no?></td>
-                <td><?=$data_paket['nama_paket']?></td>
-                <td><?=$data_paket['harga']?></td>
-                <td><a href="ubah_paket.php?id_paket=<?=$data_paket['id_paket']?>" class="btn btn-success">Ubah</a> | <a href="hapus.php?id_siswa=<?=$data_paket['id_paket']?>" 
-                onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
+                <td><h4><?=$no?></h4></td>
+                <td><h4><?=$data_paket['nama_paket']?></h4></td>
+                <td><h4><?=$data_paket['harga']?></h4></td>
+                <td><a href="ubah_paket.php?id_paket=<?=$data_paket['id_paket']?>" class="btn btn-success"><h4>Ubah</h4></a> | <a href="hapus_paket.php?id_paket=<?=$data_paket['id_paket']?>" 
+                onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger"><h4>Hapus</h4></a></td>
             </tr>
             <?php 
             }
+            
+        }
             ?>
-        </body>
+          </body>
     </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+    </table>
+    <a href="tambah_paket.php" class="btn btn-primary"><h3>Tambah Paket</h3></a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

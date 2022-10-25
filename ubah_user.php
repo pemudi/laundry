@@ -1,3 +1,6 @@
+<?php 
+    include "header.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +30,10 @@
         <input type="text" name="username" value="<?=$dt_user['username']?>" class="form-control">
         Password : 
         <input type="password" name="password" value="" class="form-control">
-
-        
+        Level : <br>
+        <input type ="radio" name="role" value="kasir">KASIR<br>
+        <input type ="radio" name="role" value="admin">ADMIN<br>
+        <input type ="radio" name="role" value="owner">OWNER<br>
         <input type="submit" name="simpan" value="Ubah User" class="btn btn-primary">
        </form>
 

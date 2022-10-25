@@ -1,3 +1,6 @@
+<?php 
+    include "header.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +11,7 @@
     <h3>Registrasi Member</h3>
     <form action="proses_tambah_member.php" method="post">
         Nama :
-        <input type="text" name="nama" value="" class="form-control">
+        <input type="text" name="nama_member" value="" class="form-control">
         Alamat : 
         <textarea name="alamat" class="form-control" rows="4"></textarea>
         Gender : 
